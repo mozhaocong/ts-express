@@ -1,14 +1,13 @@
 import express from 'express'
+import apiFile from '../view/apiFile'
 const router = express.Router()
 const app = express()
-import apiFile from '../view/apiFile'
-
 
 const routerData = {
-    apiFile: apiFile
+	apiFile: apiFile,
 }
 
-for(let i in routerData) {
-    router.use(`/${i}`,routerData.apiFile)
+for (const i in routerData) {
+	router.use(`/${i}`, routerData.apiFile)
 }
 export default router
