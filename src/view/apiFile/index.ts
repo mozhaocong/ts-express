@@ -1,19 +1,18 @@
 import express from 'express'
 const router = express.Router()
-import test from './apiFile2'
+const datagasga: ObjectMap = { 1: 0 }
+import { test } from './components/test'
 
 router.use((req, res, next) => {
-	console.log(`路由执行成功啦~~~`, Date.now())
 	next()
 })
 
-router.use('/test/', test)
-
 router.get(`/`, (req, res, next) => {
-	res.json({
-		status: 200,
-		data: `请求成功`
-	})
+	test(req, res, next)
+	// res.json({
+	// 	status: 200,
+	// 	data: `apiFile`
+	// })
 })
 
 router.get(`/data`, (req, res, next) => {

@@ -26,10 +26,12 @@ class Mysql {
 	}
 }
 
+let mySqlConnection: Connection
 const mySqlInit = function () {
 	const mysqlData = new Mysql()
 	mysqlData.init()
+	mySqlConnection = mysqlData.connection
 	return mysqlData
 }
 
-export { mySqlInit }
+export { mySqlInit, mySqlConnection }
