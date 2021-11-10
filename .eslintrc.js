@@ -13,6 +13,10 @@ module.exports = {
 	plugins: ['@typescript-eslint', 'prettier'],
 	rules: {
 		indent: 'off',
+		camelcase: 'off',
+		"comma-dangle": [2, "never"],
+		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-explicit-any': 'off',
 		'prettier/prettier': [
 			'error',
 			{ endOfLine: 'auto' },
@@ -20,8 +24,8 @@ module.exports = {
 				usePrettierrc: true,
 				printWidth: 150,
 				tabWidth: 2,
-				useTabs: true,
-			},
-		],
+				useTabs: true
+			}
+		]
 	},
 }

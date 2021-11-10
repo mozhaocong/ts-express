@@ -1,10 +1,9 @@
 import express from 'express'
 import apiFile from '../view/apiFile'
 const router = express.Router()
-const app = express()
 
 const routerData = {
-	apiFile: apiFile,
+	apiFile: apiFile
 }
 
 for (const i in routerData) {

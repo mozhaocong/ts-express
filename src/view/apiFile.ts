@@ -12,14 +12,14 @@ router.use('/test/', test)
 router.get(`/`, (req, res, next) => {
 	res.json({
 		status: 200,
-		data: `请求成功`,
+		data: `请求成功`
 	})
 })
 
 router.get(`/data`, (req, res, next) => {
 	res.json({
 		status: 200,
-		data: [1, 2, 3, 4, 5, 6, 7],
+		data: [1, 2, 3, 4, 5, 6, 7]
 	})
 })
 
