@@ -1,16 +1,23 @@
 import express, { Express, Request, Response, NextFunction } from 'express'
-
 import router from './router/index'
 import { mySqlInit } from './mySql'
 import morgan from 'morgan'
 import { json, urlencoded } from 'body-parser'
+import { get_debug_brrowse } from './puppeteerCore'
 import './typeTs/index'
 import cors from 'cors'
+
+async function browserInit() {
+	const browser = await get_debug_brrowse()
+	const page = await browser.newPage()
+	await page.goto('https://www.cnblogs.com/')
+}
+browserInit()
 
 const PORT = 3000
 const app: Express = express()
 
-mySqlInit()
+// mySqlInit()
 
 //开启 cors
 app.use(cors())
