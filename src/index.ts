@@ -1,8 +1,10 @@
 import express, { Express, Request, Response, NextFunction } from 'express'
+
 import router from './router/index'
-import { mySqlInit } from './MySql'
+import { mySqlInit } from './mySql'
 import morgan from 'morgan'
 import { json, urlencoded } from 'body-parser'
+import './typeTs/index'
 import cors from 'cors'
 
 const PORT = 3000

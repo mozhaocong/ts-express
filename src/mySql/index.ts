@@ -22,7 +22,7 @@ class Mysql {
 		//     }
 		//     console.log('SELECT ', results)
 		// })
-		this.connection.end()
+		// this.connection.end()
 	}
 }
 
