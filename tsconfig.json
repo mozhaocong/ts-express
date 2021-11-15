@@ -5,6 +5,7 @@
 		"outDir": "./dist",
 		"strict": true,
 		"esModuleInterop": true,
+		"downlevelIteration": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",

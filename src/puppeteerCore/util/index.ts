@@ -2,8 +2,8 @@ import { get_debug_brrowse } from '../init'
 let browser = null
 export const pageAllData: ObjectMap = {}
 export let pageAll: any = null
-export const pageAllUrl: any[] = []
-export async function getPageAllUrl() {
+export const pageAllUrl: string[] = []
+export const getPageAllUrl: () => Promise<string[]> = async () => {
 	if (pageAllUrl.length) {
 		return pageAllUrl
 	} else {
@@ -15,7 +15,7 @@ export async function getPageAllUrl() {
 		return pageAllUrl
 	}
 }
-export async function getPageUrl(key: string) {
+export const getPageUrl: (key?: string) => Promise<ObjectMap<string, ObjectMap>> = async (key?: string) => {
 	if (!pageAll) {
 		browser = await get_debug_brrowse()
 		pageAll = await browser.pages()
@@ -23,5 +23,5 @@ export async function getPageUrl(key: string) {
 			pageAllData[i.mainFrame().url()] = i.mainFrame()
 		}
 	}
-	return pageAllData[key] || {}
+	return !key ? pageAllData : pageAllData[key] || {}
 }
