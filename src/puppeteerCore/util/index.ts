@@ -16,7 +16,7 @@ export const getPageAllUrl: () => Promise<string[]> = async () => {
 	}
 }
 export const getPageUrl: (key?: string) => Promise<ObjectMap<string, ObjectMap>> = async (key?: string) => {
-	if (!pageAll) {
+	if (!Object.keys(pageAllData).length) {
 		browser = await get_debug_brrowse()
 		pageAll = await browser.pages()
 		for (const i of pageAll) {
