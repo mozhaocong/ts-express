@@ -130,7 +130,10 @@ export function onResponse(page: any) {
 		// console.log(response.request()) // 显示响应对应的 request 对象
 		// const data = await responseHandle(response)
 		// pcConsole(page, stringify(response.request().method()))
-		console.log('global', global.stringify(response))
+		// console.log('global', global.stringify(response))
+		if (response.request().resourceType() === 'xhr') {
+			console.log('global', await response.url())
+		}
 	})
 }
 const responseHandle = async (response: any) => {
