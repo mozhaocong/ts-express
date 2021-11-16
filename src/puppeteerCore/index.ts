@@ -6,5 +6,5 @@ export async function puppeteerCoreInit() {
 	// const listUrl = await getPageAllUrl()
 	// console.log('listUrl', listUrl)
 	// init()
-	init()
+	// init()
 }

@@ -1,4 +1,4 @@
-import { get_debug_brrowse } from '../init'
+import { get_debug_brrowse } from './init'
 let browser = null
 export const pageAllData: ObjectMap = {}
 export let pageAll: any = null

@@ -10,9 +10,8 @@ import {
 } from '@/puppeteerCore/util'
 
 export async function init() {
-	const browser = await getPageAllUrl()
-	console.log('browser', browser)
-
+	const pageAllUrl = await getPageAllUrl()
+	console.log('browser', pageAllUrl)
 	const pageData: ObjectMap = await getPageUrl()
 	const pageObj = objectFuzzyQuery('erp-test.rantion', pageData)
 	if (!pageObj.length) return
