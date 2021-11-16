@@ -3,4 +3,5 @@ interface TextElement extends Element {
 }
 interface Element extends Element {
 	innerText: string
+	click: () => void
 }

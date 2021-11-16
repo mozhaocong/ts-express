@@ -1,21 +1,32 @@
 import { objectFuzzyQuery } from '@/util/data'
-import { getPageUrl } from '@/puppeteerCore/util'
+import {
+	getInnerTextAll,
+	getPageAllUrl,
+	getPageUrl,
+	onConsole,
+	pageAll,
+	pageClickAll,
+	pcConsole
+} from '@/puppeteerCore/util'
 
 export async function init() {
+	const browser = await getPageAllUrl()
+	console.log('browser', browser)
+
 	const pageData: ObjectMap = await getPageUrl()
 	const pageObj = objectFuzzyQuery('erp-test.rantion', pageData)
 	if (!pageObj.length) return
-	const pageEvaluate = await pageObj[0].data.evaluate(() => {
+	const that = pageObj[0].data
+	// const search = await getInnerTextAll(that, '.ant-layout-sider-children')
+	// await pcConsole(that, search)
+	// await pageClickAll(that, '.top-search-from .ant-radio-button-wrapper', '物流问题')
+	// onConsole(pageObj[0].data, async (item: any) => {
+	// 	console.log('jsonValue', await item.jsonValue())
+	// })
+	const pageEvaluate = await that.evaluate(() => {
 		const antTableContent = document.querySelector('.ant-table-content')
-		const returnData: string[] = []
 		const returnTr: any[] = []
 		if (antTableContent) {
-			const thData: NodeListOf<TextElement> = antTableContent.querySelectorAll(
-				'.ant-table-align-center.ant-table-row-cell-break-word'
-			)
-			thData.forEach((item) => {
-				returnData.push(item.innerText)
-			})
 			const trData: NodeListOf<TextElement> = antTableContent.querySelectorAll('.ant-table-row.ant-table-row-level-0')
 			trData.forEach((item) => {
 				const tr: NodeListOf<TextElement> = item.querySelectorAll('td')
@@ -26,7 +37,7 @@ export async function init() {
 				returnTr.push(list)
 			})
 		}
-		return returnData
+		return returnTr
 	})
-	console.log('pageEvaluate', pageEvaluate)
+	// await pcConsole(that, pageEvaluate)
 }

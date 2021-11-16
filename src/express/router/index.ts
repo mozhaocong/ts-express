@@ -1,6 +1,6 @@
 import express from 'express'
 import apiFile from '../view/apiFile/index'
-import console from '@/view/console/index'
+import console from '../view/console/index'
 const router = express.Router()
 
 const routerData: ObjectMap = {
