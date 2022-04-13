@@ -2,7 +2,8 @@
 // 本文来源：码农网
 // 本文链接：https://www.codercto.com/a/44853.html
 
-// 前提需要谷歌浏览器和谷歌浏览器要加上 --remote-debugging-port=9222
+// 前提需要谷歌浏览器和谷歌浏览器要 在chrome.exe"后面两个空格加上--remote-debugging-port=9222
+// 例子"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 
 import puppeteer from 'puppeteer-core'
 import axios from 'axios'
