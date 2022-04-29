@@ -2,9 +2,12 @@
 import { puppeteerCoreInit } from './puppeteerCore'
 import { expressInit } from './express'
 import { main } from './main'
+import { lowCodeInit } from '@/lowCode'
 // main()
-puppeteerCoreInit()
+// puppeteerCoreInit()
 // expressInit()
+
+lowCodeInit()
 
 // process.on('unhandledRejection', (reason) => {
 // 	const list = ['_updateClient', '_client']
