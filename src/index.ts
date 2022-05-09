@@ -2,12 +2,12 @@
 import { puppeteerCoreInit } from './puppeteerCore'
 import { expressInit } from './express'
 import { main } from './main'
-// import { lowCodeInit } from '@/lowCode'
+import { lowCodeInit } from '@/lowCode'
 // main()
 // puppeteerCoreInit()
 // expressInit()
 
-// lowCodeInit()
+lowCodeInit()
 
 // process.on('unhandledRejection', (reason) => {
 // 	const list = ['_updateClient', '_client']
@@ -24,4 +24,4 @@ import { main } from './main'
 // 	}
 // })
 
-import './lowCode/generationCode'
+// import './lowCode/generationCode'

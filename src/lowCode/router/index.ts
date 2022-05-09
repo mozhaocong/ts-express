@@ -1,9 +1,9 @@
 import express from 'express'
-import apiFile from '../view/apiFile/index'
+import lowCode from '../routerModel/lowCode/index'
 const router = express.Router()
 
 const routerData: ObjectMap = {
-	apiFile: apiFile
+	lowCode: lowCode
 }
 
 for (const i in routerData) {

@@ -19,7 +19,8 @@
 		"express": "^4.17.1",
 		"install": "^0.13.0",
 		"mongoose": "^6.0.12",
-		"mysql2": "^2.3.2"
+		"mysql2": "^2.3.2",
+		"ramda": "^0.28.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.16.0",
