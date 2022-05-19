@@ -1,3 +1,5 @@
+import './fileHandling/index'
+
 // import { mySqlInit } from './mySql'
 import { puppeteerCoreInit } from './puppeteerCore'
 import { expressInit } from './express'
@@ -7,7 +9,7 @@ import { lowCodeInit } from '@/lowCode'
 // puppeteerCoreInit()
 // expressInit()
 
-lowCodeInit()
+// lowCodeInit()
 
 // process.on('unhandledRejection', (reason) => {
 // 	const list = ['_updateClient', '_client']
