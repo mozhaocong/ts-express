@@ -1,10 +1,8 @@
-import './fileHandling/index'
-
 // import { mySqlInit } from './mySql'
-import { puppeteerCoreInit } from './puppeteerCore'
-import { expressInit } from './express'
-import { main } from './main'
-import { lowCodeInit } from '@/lowCode'
+// import { puppeteerCoreInit } from './puppeteerCore'
+// import { expressInit } from './express'
+// import { main } from './main'
+// import { lowCodeInit } from '@/lowCode'
 // main()
 // puppeteerCoreInit()
 // expressInit()
@@ -27,3 +25,6 @@ import { lowCodeInit } from '@/lowCode'
 // })
 
 // import './lowCode/generationCode'
+
+import { init } from '@/createFile'
+init()

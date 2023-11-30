@@ -17,13 +17,13 @@ export function expressInit(router?: core.Router) {
 	app.use(urlencoded({ extended: false }))
 	//日志中间件
 	app.use(morgan('dev'))
-
 	app.get('/', (req: Request, res: Response, next: NextFunction) => {
 		res.json({
 			code: 0,
 			message: 'success'
 		})
 	})
+	console.log('router', router)
 
 	if (router) {
 		app.use('/', router)

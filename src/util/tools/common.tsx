@@ -1,4 +1,4 @@
-import { isTrue } from '@/utils'
+import { isTrue } from './typeJudgment'
 
 export interface DebouncedFunc<T extends (...args: any[]) => any> {
 	(...args: Parameters<T>): ReturnType<T> | undefined
@@ -31,9 +31,9 @@ export function debounce<T extends (...arg: any[]) => any>(fn: T, wait = 500) {
 }
 
 // RFrom表单组件 默认customRender方法
-export const defaultCustomRender = ({ text }: { text: any }) => {
-	return <div>{text}</div>
-}
+// export const defaultCustomRender = ({ text }: { text: any }) => {
+// 	return <div>{text}</div>
+// }
 
 //table 序号
 export const serialNumber = (
