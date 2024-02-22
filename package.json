@@ -8,8 +8,8 @@
 		"build": "tsc",
 		"start": "ts-node-dev --respawn --transpile-only src/index.ts",
 		"babel": "babel src --out-dir dist --extensions \".ts\"",
-		"dev": "nodemon --exec ts-node  -r tsconfig-paths/register --files src/index.ts ",
-		"lint": "eslint src"
+		"dev": "nodemon --exec ts-node  -r tsconfig-paths/register --files -i src/api/* src/index.ts ",
+		"lint": "eslint src/api --fix"
 	},
 	"author": "",
 	"license": "ISC",
