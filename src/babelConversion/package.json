@@ -1,0 +1,28 @@
+{
+  "name": "react-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve  --config build/webpack.dev.conf.js ",
+    "lint": "eslint src --fix",
+    "babel": "cross-env NODE_BABEL=test babel babelSrc/index.tsx --out-dir babeDist  --extensions \".tsx\"  ",
+    "node": "node node/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
+    "@reduxjs/toolkit": "^1.8.6",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-import": "^1.13.5"
+  }
+}

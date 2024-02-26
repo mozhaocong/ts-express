@@ -1,17 +1,19 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
-		"outDir": "./dist",
-		"esModuleInterop": true,
-		"downlevelIteration": true,
+		"experimentalDecorators": true,
 		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
 		"baseUrl": ".",
+		"module": "esnext",
+		"target": "esnext",
+		"sourceMap": true,
+		"types": [ "node", "webpack-env"],
+		"moduleResolution": "node",
 		"paths": {
 			"@/*": ["src/*"]
-		}
+		},
+		"allowSyntheticDefaultImports": true
 	},
-	"exclude": ["node_modules"],
-	"include": ["./src/**/*.ts"]
+	"include": ["src/*", "src/**/*","build/*"],
+	"exclude": ["node_modules"]
 }
